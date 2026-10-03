@@ -80,3 +80,63 @@ nav a {
 nav a:hover {
   text-decoration: underline;
 }
+
+/* Home section */
+
+#home {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Individual project cards */
+
+.project-grid article {
+  padding: 32px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  /* Arrange card content vertically with consistent spacing */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  /* Smoothly animate the hover effect */
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+
+/* Slightly raise and change the background colour of project cards when hovered */
+
+.project-grid article:hover {
+  transform: translateY(-4px);
+  background-color: #f0f4f8;
+}
+
+
+/* Technology tags */
+
+.project-grid ul {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.project-grid li {
+  padding: 4px 8px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+
+/* Project links */
+
+.project-links {
+  display: flex;
+  gap: 16px;
+}
