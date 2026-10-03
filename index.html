@@ -20,7 +20,12 @@
   <header>
 
     <!-- Main site navigation -->
-    <nav>
+    <nav aria-label="Main navigation">
+
+      <!-- Button used to open and close the navigation menu on mobile devices -->
+      <button id="menu-button" type="button" aria-expanded="false" aria-controls="nav-menu">
+        Menu
+      </button>
 
       <!-- Main navigation links -->
       <ul id="nav-menu">
@@ -151,7 +156,7 @@
   </footer>
 
   <!-- External JavaScript file -->
-  <!-- <script src="script.js"></script> -->
+  <script src="script.js"></script>
 
 </body>
 
