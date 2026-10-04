@@ -16,3 +16,29 @@ if (menuButton && navMenu) {
     menuButton.setAttribute("aria-expanded", isOpen);
   });
 }
+
+// Get the theme button from the HTML.
+const themeButton = document.getElementById("theme-button");
+
+// Only add the theme functionality if the button exists.
+if (themeButton) {
+  // Store the original button text from the HTML.
+  const lightModeLabel = themeButton.textContent.trim();
+
+  // Switch between light and dark mode when the button is clicked.
+  themeButton.addEventListener("click", () => {
+    // Add or remove the "dark-mode" class from the body.
+    document.body.classList.toggle("dark-mode");
+
+    // Check whether dark mode is currently active.
+    const isDarkMode = document.body.classList.contains("dark-mode");
+
+    // Update the button text according to the current theme.
+    themeButton.textContent = isDarkMode
+      ? "☀ Light Mode"
+      : lightModeLabel;
+
+    // Update the accessibility state of the button.
+    themeButton.setAttribute("aria-pressed", isDarkMode);
+  });
+}

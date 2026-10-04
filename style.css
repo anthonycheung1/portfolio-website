@@ -31,6 +31,11 @@ header {
   z-index: 10;
 }
 
+#theme-button {
+  grid-column: 3;
+  justify-self: end;
+}
+
 /* Headings */
 
 h1 {
@@ -236,4 +241,38 @@ button:focus-visible {
 footer {
   padding: 32px;
   text-align: center;
+}
+
+/* Dark mode styles */
+
+body.dark-mode {
+  background-color: #222222;
+  color: #ffffff;
+}
+
+body.dark-mode a {
+  color: #ffffff;
+}
+
+body.dark-mode header {
+  background-color: #222222;
+  border-bottom-color: #555555;
+}
+
+body.dark-mode .project-grid article {
+  border-color: #555555;
+  background-color: #333333;
+}
+
+body.dark-mode .project-grid article:hover {
+  background-color: #3d4650;
+}
+
+body.dark-mode .project-grid li {
+  border-color: #555555;
+}
+
+body.dark-mode a:focus-visible,
+body.dark-mode button:focus-visible {
+  outline-color: #ffffff;
 }
