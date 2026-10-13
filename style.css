@@ -145,12 +145,14 @@ button:focus-visible {
   transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
+
 /* Slightly raise and change the background colour of project cards when hovered */
 
 .project-grid article:hover {
   transform: translateY(-4px);
   background-color: #f0f4f8;
 }
+
 
 /* Technology tags */
 
@@ -167,12 +169,45 @@ button:focus-visible {
   border-radius: 4px;
 }
 
+
 /* Project links */
 
 .project-links {
   display: flex;
   gap: 16px;
 }
+
+/* Project status badge */
+
+.project-status {
+  display: inline-block;
+  align-self: flex-start;
+
+  padding: 4px 10px;
+
+  border: 1px solid #b7791f;
+  border-radius: 999px;
+
+  background-color: #fff4d6;
+  color: #754c00;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.project-card--in-progress {
+  border-style: dashed;
+}
+
+/* Dark mode */
+
+body.dark-mode .project-status {
+  border-color: #d6a64f;
+  background-color: #40331d;
+  color: #ffe0a0;
+}
+
 
 /* Responsive navigation for mobile devices */
 
@@ -215,6 +250,7 @@ button:focus-visible {
   }
 
 }
+
 
 /* Responsive project grid for tablets */
 
